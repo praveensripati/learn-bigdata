@@ -8,7 +8,7 @@ import org.apache.spark.sql.SparkSession
 /**
  * An example demonstrating ALS.
  */
-object ALSExample {
+object als_example {
 
   case class Rating(userId: Int, movieId: Int, rating: Float, timestamp: Long)
   def parseRating(str: String): Rating = {
