@@ -34,5 +34,8 @@ Spark can be run via EMR, but it takes about 15 minutes to get started with EMR 
 1. Disable the INFO logging as it spits a lot of messages. Change INFO to WARN in the below file.
 
     ```
-    cp conf/log4j.properties.template conf/log4j.properties
+    cd $SPARK_HOME/conf
+    cp log4j.properties.template log4j.properties
+    #Make the changes to the file
+    cd
     ```
