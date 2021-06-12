@@ -7,7 +7,7 @@
     >python als_example.py
 
 1. Execute the Spark scala program.
-    >sbt clean package
+    >sbt clean package  
     >spark-submit --class org.apache.spark.examples.ml.ALSExample target/scala-2.11/als_2.11-0.0.1.jar
 
 # Further Reading
