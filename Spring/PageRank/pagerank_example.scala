@@ -4,7 +4,7 @@ package org.apache.spark.examples.graphx
 import org.apache.spark.graphx.GraphLoader
 import org.apache.spark.sql.SparkSession
 
-object PageRankExample {
+object pagerank_example {
   def main(args: Array[String]): Unit = {
 
     // Creates a SparkSession.
