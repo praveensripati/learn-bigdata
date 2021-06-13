@@ -7,7 +7,7 @@
 
     ```
     wget https://archive.apache.org/dist/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
-    jar -xvf hadoop-2.7.3.tar.gz
+    tar -xvf hadoop-2.7.3.tar.gz
     ```
 1. Copy the AWS/Hadoop jars to the Spark Classpath.
 
