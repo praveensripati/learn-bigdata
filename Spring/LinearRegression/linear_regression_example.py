@@ -7,7 +7,7 @@ from pyspark.ml.linalg import Vectors
 
 if __name__ == "__main__":
 
-    # Create a SparkSession (Note, the config section is only for Windows!)
+    # Create a SparkSession
     spark = SparkSession.builder.appName("LinearRegression").getOrCreate()
 
     # Load up our data and convert it to the format MLLib expects.
@@ -17,10 +17,6 @@ if __name__ == "__main__":
     # Convert this RDD to a DataFrame
     colNames = ["label", "features"]
     df = data.toDF(colNames)
-
-    # Note, there are lots of cases where you can avoid going from an RDD to a DataFrame.
-    # Perhaps you're importing data from a real database. Or you are using structured streaming
-    # to get your data.
 
     # Let's split our data into training data and testing data
     trainTest = df.randomSplit([0.5, 0.5])
