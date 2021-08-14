@@ -13,7 +13,7 @@ Spark can be run via EMR, but it takes about 15 minutes to get started with EMR 
     curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
 
     sudo apt-get update
-    sudo apt install openjdk-8-jdk scala python python-pip sbt -y
+    sudo apt install openjdk-8-jdk scala python3 python3-pip sbt -y
     pip install numpy py4j
     ```
 1. Download the install Spark on the EC2. The latest Spark can be downloaded from [this](https://spark.apache.org/downloads.html) URL.
