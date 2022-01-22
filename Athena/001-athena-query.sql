@@ -29,13 +29,13 @@ create external table ontime (
   NASDelay INT,
   SecurityDelay INT,
   LateAircraftDelay INT
-) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION 's3://airlinedata-praveen/input/';
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION 's3://airlinedata-praveen/input-csv/';
 
 CREATE TABLE ontime_parquet_snappy
     WITH (
           format = 'PARQUET',
           parquet_compression = 'SNAPPY',
-          external_location = 's3://airline-dataset-praveen/athena-export-to-parquet'
+          external_location = 's3://airlinedata-praveen/athena-export-to-parquet'
     ) AS SELECT * FROM ontime;
 
 select Origin, count(*) from ontime where DepTime > CRSDepTime group by Origin;

@@ -28,6 +28,6 @@ create external table ontime (
   NASDelay INT,
   SecurityDelay INT,
   LateAircraftDelay INT
-) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION 's3://praveen-airline-dataset/input-csv/';
+) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' LOCATION 's3://airlinedata-praveen/input-csv/';
 
-INSERT OVERWRITE DIRECTORY 's3://praveen-airline-dataset/csv-query-output' select Origin, count(*) from ontime where DepTime > CRSDepTime group by Origin;
+INSERT OVERWRITE DIRECTORY 's3://airlinedata-praveen/csv-query-output' select Origin, count(*) from ontime where DepTime > CRSDepTime group by Origin;
